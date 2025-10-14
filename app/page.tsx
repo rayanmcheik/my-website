@@ -1,11 +1,13 @@
 import Main from '../app/components/Main'; 
-import Banner from '../app/components/Banner'; 
+import Navbar from '../app/components/Navbar'; 
+import Footer from '../app/components/Footer';
 
 export default function HomePage() {
   return (
     <>
-      <Banner />
+      <Navbar />
       <Main />
+      <Footer />
     </>
   );
 }

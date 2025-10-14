@@ -1,0 +1,11 @@
+.my-paragraph {
+  @apply text-lg text-gray-700 mb-4;
+}
+
+.my-button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded;
+}
+
+.nav-link {
+  @apply text-white hover:text-gray-300 px-4;
+}

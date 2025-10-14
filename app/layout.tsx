@@ -8,7 +8,7 @@ export const metadata = {
   title: 'My Website',
   description: 'Learn React + Next.js + Tailwind',
 };
-
+ 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

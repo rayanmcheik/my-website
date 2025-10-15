@@ -1,12 +1,13 @@
-import Main from '../app/components/Main'; 
+
 import Navbar from '../app/components/Navbar'; 
 import Footer from '../app/components/Footer';
+import './globals.css';
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Main />
+      <main></main>
       <Footer />
     </>
   );

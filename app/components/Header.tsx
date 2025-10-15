@@ -2,12 +2,12 @@
 import React from 'react'
 import logo from "../assets/logo.png";
 
-export const Navbar = () => {
+export const Header = () => {
   return (
     <nav className="flex items-center justify-between p-4 pr-20 bg-gray-900 shadow-md">
 
 
-      <img src="/logo.png" alt="Logo" className="w-auto pl-4 h-15" />
+    <a href='layout.tsx'> <img src="/logo.png" alt="Logo" className="w-auto pl-4 h-15" /></a> 
       <h1 className="font-sans text-2xl text-white Times New Romanfont-bold">
         Mercedes-Benz
       </h1>
@@ -36,4 +36,4 @@ export const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

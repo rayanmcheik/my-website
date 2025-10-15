@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 export const Header = () => {
   return (
-    <nav className="flex items-center justify-between p-4 pr-20 bg-gray-900 shadow-md">
+    <nav className="flex items-center justify-between w-full max-w-full p-4 pr-20 m-auto bg-black shadow-md">
 
 
     <a href='layout.tsx'> <img src="/logo.png" alt="Logo" className="w-auto pl-4 h-15" /></a> 

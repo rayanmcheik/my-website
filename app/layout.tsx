@@ -33,6 +33,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Card image='g-class.jfif' title='G-CLASS' description='The Mercedes-Benz G-Class is an iconic luxury SUV that combines rugged off-road capability with a premium interior and timeless design.' />
             <Card image='c300.jpg' title='C300' description='The Mercedes-Benz C300 2015 is a compact luxury sedan offering refined comfort, a smooth ride, and advanced technology features for everyday driving.' />
           </div>
+          <div className="relative w-full mb-10">
+
+            <video src="cls-ads.mp4" autoPlay muted loop playsInline className="object-cover w-full h-140" />
+            <div className="absolute inset-0 flex items-start justify-center pt-10 bg-white opacity-5 h-140">
+
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-start pt-30 ">
+              <h1 className="font-sans font-bold tracking-wide text-left text-white uppercase text-9xl md:text-2xl">
+                Introducing the all-new <br /> CLS 2018.
+              </h1>
+              <button className="px-6 py-3 mt-6 font-semibold text-white transition-colors duration-300 border-2 rounded-lg shadow-lg hover:bg-amber-100 hover:text-black hover:border-amber-100">
+                Explore More 
+              </button>
+            </div>
+          </div>
         </main>
 
         <Footer />

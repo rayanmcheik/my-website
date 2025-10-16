@@ -1,15 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-10 text-white bg-black ">
-      <div className="grid grid-cols-1 gap-2 mx-auto max-w-7xl md:grid-cols-4">
-
-
-        <div className='flex self-center justify-center object-center'>
-          <h1 className='text-4xl font-bold tracking-wide'>
+    <footer className="w-full px-6 py-10 text-white bg-black max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex items-center justify-center md:justify-start">
+          <h1 className="text-3xl font-bold tracking-wide text-center md:text-4xl md:text-left">
             More Information
-            </h1>
+          </h1>
         </div>
         <div>
           <h3 className="mb-4 text-lg font-semibold">Company</h3>
@@ -20,8 +18,6 @@ const Footer = () => {
             <li><a href="#" className="hover:text-white">Media Site</a></li>
           </ul>
         </div>
-
-
         <div>
           <h3 className="mb-4 text-lg font-semibold">Knowledge</h3>
           <ul className="space-y-2 text-gray-300">
@@ -30,8 +26,6 @@ const Footer = () => {
             <li><a href="#" className="hover:text-white">Real Driving Emissions</a></li>
           </ul>
         </div>
-
-
         <div>
           <h3 className="mb-4 text-lg font-semibold">Business Services</h3>
           <ul className="space-y-2 text-gray-300">
@@ -41,12 +35,9 @@ const Footer = () => {
             <li><a href="#" className="hover:text-white">Training for Authorized Dealers</a></li>
           </ul>
         </div>
-
       </div>
-
- 
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

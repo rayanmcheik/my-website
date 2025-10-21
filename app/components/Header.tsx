@@ -6,7 +6,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative w-full max-w-[1200px] mx-auto">
+    <nav className="relative w-full  mx-auto">
       <div className="relative flex items-center justify-between w-full p-4 bg-black shadow-md">
         <div className="flex justify-center flex-1 md:justify-start">
           <a href="layout.tsx">

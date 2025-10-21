@@ -4,11 +4,18 @@ import Header from './components/Header';
 import Footer from '../app/components/Footer';
 import Card from './components/Card';
 import Button from './components/Button';
+import Orderbutton from './components/Orderbutton';
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+
+
   return (
+
     <html lang="en">
-<head><link rel="icon" type="image/png" href="/logo.png" /></head>
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+      </head>
       <body className="font-sans">
         <Header />
         <main className="flex flex-col items-center min-h-screen w-full max-w-[1200px] mx-auto">
@@ -21,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 The Art of Protection
               </h1>
 
-              <Button src='#' Text='Learn More'></Button>
+              <Button color='text-white' bgcolor='' hovercolor='hover:text-black' bgcolorhover='hover:bg-white' src='#' Text='Learn More'></Button>
             </div>
           </div>
 
@@ -52,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 Introducing the all-new <br /> CLS 2018
               </h1>
 
-              <Button src='#' Text='Explore More '></Button>
+              <Button src='#' color='text-white' bgcolor='' hovercolor='hover:text-black' bgcolorhover='hover:bg-white' Text='Explore More '></Button>
             </div>
 
           </div>
@@ -68,7 +75,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 VISION ICONIC
               </h2>
               <h4 className='p-10 text-neutral-700'>A legendary model that combines timeless design, luxurious comfort, and advanced engineering. It represents the pinnacle of Mercedes’ heritage, blending elegance, performance, and innovation in a truly unforgettable driving experience.</h4>
-              <button className='p-2 text-black rounded-lg cursor-pointer bg-white border-2 border-b-black hover:bg-black hover:text-white'>Order Now</button>
+
+         
+              <Button src='#' color='text-black' bgcolor='bg-white' hovercolor='hover:text-white' bgcolorhover='hover:bg-black' Text='Order Now'></Button>
 
             </div>
           </div>

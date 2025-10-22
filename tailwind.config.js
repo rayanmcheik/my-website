@@ -5,8 +5,12 @@ module.exports = {
     "./components/**/*.{ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        josefin: ['"Josefin Sans"', "sans-serif"],
+        playwrite: ['"Playwrite DE SAS"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
- 

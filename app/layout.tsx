@@ -30,9 +30,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="font-sans">
         <Header />
-        <main className="flex flex-col items-center min-h-screen w-full max-w-[1200px] mx-auto">
+        <main className="flex flex-col items-center min-h-screen w-full  mx-auto">
 
-          <div className="relative w-full mb-20">
+          <div className="relative w-full mb-20 ">
             <img src="/ads-mercedes.jpg" alt="ads" className="object-cover w-full h-[560px]" />
             <div className="absolute inset-0 bg-black opacity-10"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center pt-10">
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
 
-          <div className="grid justify-center w-full grid-cols-1 gap-5 px-0 sm:grid-cols-2 md:grid-cols-3 md:mb-20 ">
+          <div className="grid justify-center w-full grid-cols-1 gap-5 px-0 sm:grid-cols-2 md:grid-cols-3 md:mb-20 max-w-[1200px]">
             <Card image="cls.jpg" title="CLS63" description="The Mercedes-Benz CLS 63 is a high-performance luxury sedan combining sleek design, powerful V8 engine performance, and advanced technology for an exhilarating driving experience." />
             <Card image="s-class.jpeg" title="S-CLASS" description="The Mercedes-Benz S-Class is the flagship luxury sedan, offering unmatched comfort, cutting-edge technology, and a refined, elegant design." />
             <Card image="e-class.jfif" title="E-CLASS" description="The Mercedes-Benz E-Class is a midsize luxury sedan that combines elegance, advanced technology, and smooth performance for everyday comfort and style." />
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
 
-          <div className="relative w-full my-10 md:mb-20">
+          <div className="relative w-full my-10 md:mb-20 ">
             <video src="cls-ads.mp4" autoPlay muted loop playsInline className="object-cover w-full h-[560px]" />
             <div className="absolute inset-0 bg-white opacity-5"></div>
             <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:px-16 md:pb-12">
@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 
 
-          <div className="relative flex flex-col w-full mb-20 md:flex-row md:mb-20">
+          <div className="relative flex flex-col w-full mb-20 md:flex-row md:mb-20 max-w-[1200px]">
             <img src="/mer-icon.jpg" alt="ads" className="object-cover mb-5 w-full md:w-1/2 h-[360px] md:object-fill" />
             <div className='flex flex-col items-center justify-center w-full md:w-1/2 '>
 

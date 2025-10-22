@@ -1,1 +1,8 @@
 @import "tailwindcss";
+.cursor-play {
+  cursor: url('/play-cursor.svg') 16 16, pointer;
+}
+
+.cursor-pause {
+  cursor: url('/pause-cursor.svg') 16 16, pointer;
+}

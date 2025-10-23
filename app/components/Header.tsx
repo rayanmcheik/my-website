@@ -13,11 +13,11 @@ const Header = () => {
       : 'text-gray-300 hover:text-white transition';
 
   return (
-    <nav className="w-full bg-black shadow-md">
-      <div className="container flex items-center justify-between pt-4 pb-4 mx-auto max-w-[1200px]">
+    <nav className="w-full pt-1 pb-1 bg-black shadow-md">
+      <div className="container flex items-center justify-between px-4 mx-auto max-w-[1200px]">
         <div className="flex items-center">
           <Link href="/">
-            <img src="logo.png" alt="Logo" className="h-12 w-auto" />
+            <img src="logo.png" alt="Logo" className="w-auto h-12" />
           </Link>
         </div>
 

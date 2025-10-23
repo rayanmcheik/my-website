@@ -15,9 +15,9 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="flex items-center justify-center min-h-screen bg-black px-4 pt-20">
-            <div className="w-full max-w-3xl bg-black border border-amber-50 rounded-2xl shadow-xl p-8 md:p-12">
-                <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+        <main className="flex items-center justify-center min-h-screen px-4 pt-20 pb-20 bg-neutral-900">
+            <div className="w-full max-w-3xl p-8 bg-black border shadow-xl border-amber-50 rounded-2xl md:p-12">
+                <h1 className="mb-6 text-3xl font-bold text-center text-white md:text-4xl">
                     Contact Us
                 </h1>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
                             placeholder=" "
                             value={formData.name}
                             onChange={handleChange}
-                            className="peer capitalize w-full border-b-2 border-gray-300 bg-transparent pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent focus:outline-none focus:border-white"
+                            className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent capitalize bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
                         <label className={`absolute left-4 text-gray-400 transition-all duration-200
               ${formData.name ? 'top-0 text-white text-sm' : 'top-6 text-white text-2xl'}
@@ -48,7 +48,7 @@ export default function ContactPage() {
                             placeholder=" "
                             value={formData.email}
                             onChange={handleChange}
-                            className="peer w-full border-b-2 border-gray-300 bg-transparent pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent focus:outline-none focus:border-white"
+                            className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
                         <label className={`absolute left-4 text-gray-400 transition-all duration-200
               ${formData.email ? 'top-0 text-white text-2xl' : 'top-6 text-white text-2xl'}
@@ -65,7 +65,7 @@ export default function ContactPage() {
                             value={formData.message}
                             onChange={handleChange}
                             rows={6}
-                            className="peer capitalize w-full border-b-2 border-gray-300 bg-transparent pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent focus:outline-none focus:border-white"
+                            className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent capitalize bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
                         <label className={`absolute left-4 text-gray-400 transition-all duration-200
               ${formData.message ? 'top-0 text-white text-2xl' : 'top-6 text-white text-2xl'}
@@ -74,15 +74,16 @@ export default function ContactPage() {
                             Your Message
                         </label>
                     </div>
-
-                    <Button
-                        Text="Send Message"
-                        src="#"
-                        color="text-white"
-                        hovercolor="hover:text-black"
-                        bgcolor="bg-black"
-                        bgcolorhover="hover:bg-white"
-                    />
+                    <div className="flex items-center justify-center">
+                        <Button
+                            Text="Send Message"
+                            src="#"
+                            color="text-white"
+                            hovercolor="hover:text-black"
+                            bgcolor="bg-black"
+                            bgcolorhover="hover:bg-white"
+                        />
+                    </div>
                 </form>
             </div>
         </main>

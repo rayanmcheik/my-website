@@ -15,15 +15,18 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="flex items-center justify-center min-h-screen px-4 pt-20 pb-20 bg-neutral-900">
-            <div className="w-full max-w-3xl p-8 bg-black border shadow-xl border-amber-50 rounded-2xl md:p-12">
+        <main className="relative flex items-center justify-center min-h-screen px-4 pt-20 pb-20">
+
+            <div className="absolute inset-0 bg-[url('/backcontact.jpg')] bg-cover bg-center z-0" />
+ 
+            <div className="absolute inset-0 bg-black/10 z-0" />
+
+            <div className="relative z-10 w-full max-w-3xl p-8 bg-black/90 border shadow-xl border-amber-50 rounded-2xl md:p-12">
                 <h1 className="mb-6 text-3xl font-bold text-center text-white md:text-4xl">
                     Contact Us
                 </h1>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
-
                     <div className="relative w-full">
                         <input
                             type="text"
@@ -33,7 +36,7 @@ export default function ContactPage() {
                             onChange={handleChange}
                             className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent capitalize bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
-                        <label className={`absolute left-4 text-gray-400 transition-all duration-200
+                        <label className={`absolute left-4 transition-all duration-200
               ${formData.name ? 'top-0 text-white text-sm' : 'top-6 text-white text-2xl'}
               peer-focus:top-0 peer-focus:text-white peer-focus:text-sm`}
                         >
@@ -50,8 +53,8 @@ export default function ContactPage() {
                             onChange={handleChange}
                             className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
-                        <label className={`absolute left-4 text-gray-400 transition-all duration-200
-              ${formData.email ? 'top-0 text-white text-2xl' : 'top-6 text-white text-2xl'}
+                        <label className={`absolute left-4 transition-all duration-200
+              ${formData.email ? 'top-0 text-white text-sm' : 'top-6 text-white text-2xl'}
               peer-focus:top-0 peer-focus:text-white peer-focus:text-sm`}
                         >
                             Email
@@ -67,13 +70,14 @@ export default function ContactPage() {
                             rows={6}
                             className="w-full pt-6 pb-1 pl-2 text-2xl text-white placeholder-transparent capitalize bg-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-white"
                         />
-                        <label className={`absolute left-4 text-gray-400 transition-all duration-200
-              ${formData.message ? 'top-0 text-white text-2xl' : 'top-6 text-white text-2xl'}
+                        <label className={`absolute left-4 transition-all duration-200
+              ${formData.message ? 'top-0 text-white text-sm' : 'top-6 text-white text-2xl'}
               peer-focus:top-0 peer-focus:text-white peer-focus:text-sm`}
                         >
                             Your Message
                         </label>
                     </div>
+
                     <div className="flex items-center justify-center">
                         <Button
                             Text="Send Message"

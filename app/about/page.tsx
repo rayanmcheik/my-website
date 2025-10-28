@@ -7,72 +7,63 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import CardsAbout from '../components/CardsAbout';
+import { Raitingabout } from '../components/Raitingabout';
+import { DefaultAccordion } from '../components/Accordion';
+
 
 export default function AboutPage() {
   return (
-    <div className="flex items-center justify-center w-full pb-20 bg-white ">
-      <Swiper
-        effect="creative"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        loop={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 200,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={{ clickable: true }}
-        navigation
-        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-        className="w-full h-[750px]"
-      >
-        <SwiperSlide className="flex items-center justify-center object-contain w-full">
-          <CardsAbout
-            image="1.jpg"
-            title="G-CLASS"
-            colortext='text-white'
-             />
-        </SwiperSlide>
+    <main className="flex justify-center items-center min-h-screen bg-white px-2 sm:px-4 pt-16 sm:pt-20 pb-10 sm:pb-20">
+      <div className="flex flex-col items-center justify-center w-full">
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={'auto'}
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{
+            type: 'progressbar',
+          }}
+          navigation
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+          className="w-full h-[400px] sm:h-[550px] md:h-[650px] lg:h-[768px]"
+        >
+          {[
+            { image: '1.jpg', title: 'G-CLASS', colortext: 'text-white' },
+            { image: '2.jpg', title: 'Maybach V12', colortext: 'text-white' },
+            { image: '3.jpg', title: 'No need to explain.', colortext: 'text-white' },
+            { image: '4.jpg', title: 'GT3', colortext: 'text-white' },
+            { image: '5.jpg', title: 'Time to drive a Mercedes!', colortext: 'text-black' },
+          ].map((slide, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center w-full h-full"
+            >
+              <CardsAbout
+                image={slide.image}
+                title={slide.title}
+                colortext={slide.colortext}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        <SwiperSlide className="flex items-center justify-center w-full h-full">
-          <CardsAbout
-            image="2.jpg"
-            title="Maybach V12"
-            colortext='text-white'
-           />
-        </SwiperSlide>
-
-        <SwiperSlide className="flex items-center justify-center w-full h-full">
-          <CardsAbout
-            image="3.jpg"
-            title="No need to explain."
-            colortext='text-white'
-           />
-        </SwiperSlide>
-
-        <SwiperSlide className="flex items-center justify-center w-full h-full">
-          <CardsAbout
-            image="4.jpg"
-            title="GT3"
-            colortext='text-white'
-            />
-        </SwiperSlide>
-
-        <SwiperSlide className="flex items-center justify-center w-full h-full">
-          <CardsAbout
-            image="5.jpg"
-            title="Time to drive a Mercedes!"
-            colortext='text-black'
-             />
-        </SwiperSlide>
-      </Swiper>
-    </div>
+        <div className="w-full mt-8 sm:mt-12 px-4">
+          <Raitingabout />
+          <DefaultAccordion></DefaultAccordion>
+        </div>
+      </div>
+    </main>
   );
 }

@@ -13,7 +13,7 @@ import { DefaultAccordion } from '../components/Accordion';
 
 export default function AboutPage() {
   return (
-    <main className="flex justify-center items-center min-h-screen bg-white px-2 sm:px-4 pt-16 sm:pt-20 pb-10 sm:pb-20">
+    <main className="relative min-h-screen pt-0 bg-white pb-10 sm:pb-20">
       <div className="flex flex-col items-center justify-center w-full">
         <Swiper
           effect="coverflow"
@@ -34,10 +34,16 @@ export default function AboutPage() {
           }}
           pagination={{
             type: 'progressbar',
+
           }}
           navigation
+
+          style={{
+            "--swiper-navigation-color": "#ffcc00",
+            "--swiper-navigation-size": "35px",
+          } as React.CSSProperties}
           modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-          className="w-full h-[400px] sm:h-[550px] md:h-[650px] lg:h-[768px]"
+          className="w-full h-[400px] sm:h-[550px] md:h-[650px] lg:h-[768px] "
         >
           {[
             { image: '1.jpg', title: 'G-CLASS', colortext: 'text-white' },

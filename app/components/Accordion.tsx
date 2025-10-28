@@ -11,64 +11,60 @@ const CUSTOM_ANIMATION = {
 };
 
 export function DefaultAccordion() {
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = React.useState<number | null>(null);
 
-  const handleOpen = (value: number) => setOpen(open === value ? 0 : value);
+  const handleOpen = (value: number) => setOpen(open === value ? null : value);
+
+  const items = [
+    {
+      id: 1,
+      title: "The Legacy of Mercedes-Benz",
+      content:
+        "Founded in 1926, Mercedes-Benz pioneered the automobile industry with innovation, luxury, and craftsmanship. Its iconic three-pointed star represents mobility on land, sea, and air — a vision that still drives the brand today.",
+    },
+    {
+      id: 2,
+      title: "Design & Craftsmanship",
+      content:
+        "Mercedes design blends elegance with performance. Every curve, line, and interior detail reflects precision and innovation — from the iconic S-Class to the rugged G-Class.",
+    },
+    {
+      id: 3,
+      title: "Power & Performance",
+      content:
+        "AMG performance models redefine speed and control. Handcrafted engines, precision handling, and dynamic power deliver the “One Man, One Engine” philosophy of Mercedes-AMG.",
+    },
+    {
+      id: 4,
+      title: "Innovation & Technology",
+      content:
+        "From MBUX voice control to advanced driver assistance and electric EQ models, Mercedes-Benz leads the future of smart, sustainable, and connected mobility.",
+    },
+  ];
 
   return (
-    <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8">
-      <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader
-          onClick={() => handleOpen(1)}
-          className="flex justify-center items-center w-full text-center text-lg text-black hover:text-gray-700 transition"
+    <div className=" w-fit max-w-2xl mx-auto px-4 md:ml-5 sm:px-6 lg:px-8">
+      {items.map((item) => (
+        <Accordion
+          key={item.id}
+          open={open === item.id}
+          animate={CUSTOM_ANIMATION}
         >
-          The Legacy of Mercedes-Benz !
-        </AccordionHeader>
-        <AccordionBody className="text-black leading-relaxed mx-auto max-w-6xl text-center sm:text-left">
-          Founded in 1926, Mercedes-Benz pioneered the automobile industry with innovation,
-          luxury, and craftsmanship. Its iconic three-pointed star represents mobility on
-          land, sea, and air — a vision that still drives the brand today.
-        </AccordionBody>
-      </Accordion>
+          <AccordionHeader
+            onClick={() => handleOpen(item.id)}
+            className="flex  border-t-1 border-b-gray-500 justify-between items-center w-full text-lg text-black hover:text-gray-700 transition text-left"
+          >
+            <span className="flex-1 text-left pt-3 pb-3">{item.title}</span>
+            <span className="ml-4  text-sm text-neutral-600/70">
+              {open === item.id ? "∧" : "∨"}
+            </span>
+          </AccordionHeader>
 
-      <Accordion open={open === 2} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader
-          onClick={() => handleOpen(2)}
-          className="flex justify-center items-center w-full text-center text-lg text-black hover:text-gray-700 transition"
-        >
-          Design & Craftsmanship !
-        </AccordionHeader>
-        <AccordionBody className="text-black leading-relaxed mx-auto max-w-6xl text-center sm:text-left">
-          Mercedes design blends elegance with performance. Every curve, line, and interior
-          detail reflects precision and innovation — from the iconic S-Class to the rugged G-Class.
-        </AccordionBody>
-      </Accordion>
-
-      <Accordion open={open === 3} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader
-          onClick={() => handleOpen(3)}
-          className="flex justify-center items-center w-full text-center text-lg text-black hover:text-gray-700 transition"
-        >
-          Power & Performance !
-        </AccordionHeader>
-        <AccordionBody className="text-black leading-relaxed mx-auto max-w-6xl text-center sm:text-left">
-          AMG performance models redefine speed and control. Handcrafted engines, precision
-          handling, and dynamic power deliver the “One Man, One Engine” philosophy of Mercedes-AMG.
-        </AccordionBody>
-      </Accordion>
-
-      <Accordion open={open === 4} animate={CUSTOM_ANIMATION}>
-        <AccordionHeader
-          onClick={() => handleOpen(4)}
-          className="flex justify-center items-center w-full text-center text-lg text-black hover:text-gray-700 transition"
-        >
-          Innovation & Technology !
-        </AccordionHeader>
-        <AccordionBody className="text-black leading-relaxed mx-auto max-w-6xl text-center sm:text-left">
-          From MBUX voice control to advanced driver assistance and electric EQ models,
-          Mercedes-Benz leads the future of smart, sustainable, and connected mobility.
-        </AccordionBody>
-      </Accordion>
+          <AccordionBody className="text-black leading-relaxed text-center sm:text-left pt-5 pb-3">
+            {item.content}
+          </AccordionBody>
+        </Accordion>
+      ))}
     </div>
   );
 }

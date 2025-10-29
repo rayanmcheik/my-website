@@ -22,20 +22,30 @@
 .swiper-pagination-progressbar-fill {
   background: #ffcc00 !important;
 }
+.swiper-button-prev {
+  margin-left: 40px !important;
+ 
+}
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: #4b5563; 
+  background-color: gray !important; 
   color:#ffcc00;
   width: max-content;
   height: max-content;
   border-radius: 50%;
   padding: 10px;
+  opacity: 80%;
 
 }
+.swiper-button-next {
+  margin-right: 40px;
+  opacity: 80%;
+}
+
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: white;
-   color: #4b5563; 
- 
+  background-color: white !important;
+   color: #4b5563 ; 
+
 }

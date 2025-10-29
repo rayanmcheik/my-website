@@ -13,7 +13,7 @@ import { DefaultAccordion } from '../components/Accordion';
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen pt-0 bg-white pb-10 sm:pb-20">
+    <main className="relative min-h-screen pt-0 pb-10 bg-white sm:pb-20">
       <div className="flex flex-col items-center justify-center w-full">
         <Swiper
           effect="coverflow"
@@ -65,7 +65,7 @@ export default function AboutPage() {
           ))}
         </Swiper>
 
-        <div className="w-full mt-8 sm:mt-12 px-4">
+        <div className="w-full px-4 mt-8 sm:mt-12">
           <Raitingabout />
           <DefaultAccordion></DefaultAccordion>
         </div>

@@ -43,7 +43,7 @@ export function DefaultAccordion() {
   ];
 
   return (
-    <div className=" w-fit max-w-2xl mx-auto px-4 md:ml-5 sm:px-6 lg:px-8">
+    <div className="flex flex-col items-center justify-center max-w-2xl px-4 mx-auto w-fit sm:px-6 lg:px-8">
       {items.map((item) => (
         <Accordion
           key={item.id}
@@ -52,15 +52,19 @@ export function DefaultAccordion() {
         >
           <AccordionHeader
             onClick={() => handleOpen(item.id)}
-            className="flex  border-t-1 border-b-gray-500 justify-between items-center w-full text-lg text-black hover:text-gray-700 transition text-left"
+            className="flex items-center justify-between w-full text-lg text-left text-black transition border-t-1 border-b-gray-500 hover:text-gray-700"
           >
-            <span className="flex-1 text-left pt-3 pb-3">{item.title}</span>
-            <span className="ml-4  text-sm text-neutral-600/70">
-              {open === item.id ? "∧" : "∨"}
+            <span className="flex-1 pt-3 pb-2 text-left">{item.title}</span>
+            <span className="ml-4 text-sm text-neutral-600/70">
+              {open === item.id ? (
+                <img src="/topArrow.svg" alt="arrow up" className="inline w-4 h-4" />
+              ) : (
+                <img src="/downArrow.svg" alt="arrow down" className="inline w-4 h-4" />
+              )}
             </span>
           </AccordionHeader>
 
-          <AccordionBody className="text-black leading-relaxed text-center sm:text-left pt-5 pb-3">
+          <AccordionBody className="pt-5 pb-3 leading-relaxed text-center text-black sm:text-left">
             {item.content}
           </AccordionBody>
         </Accordion>

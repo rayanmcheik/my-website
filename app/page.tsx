@@ -27,7 +27,7 @@ export default function HomePage() {
       <div className="relative w-full my-10 mb-20">
         <video src="cls-ads.mp4" autoPlay muted loop playsInline className="object-cover w-full h-[560px]" />
         <div className="absolute inset-0 bg-white opacity-5"></div>
-        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:px-16 md:pb-12">
+        <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:px-16 md:pb-12 md:justify-end md:items-center">
           <h2 className="text-base leading-snug text-white capitalize font-josefin md:text-lg lg:text-xl md:leading-normal">
             Mercedes-Benz CLS 400 4MATIC mit EQ Technologie | Energieverbrauch kombiniert: 14,9–18,8 kWh/100 km | CO₂-Emissionen kombiniert: 0 g/km
           </h2>
@@ -35,7 +35,7 @@ export default function HomePage() {
             Die Angaben sind vorläufig. Es liegen bislang weder bestätigte Werte von einer amtlich anerkannten Prüforganisation noch eine EG-Typgenehmigung noch eine Konformitätsbescheinigung vor.
           </h4>
         </div>
-        <div className="absolute inset-0 flex flex-col items-start justify-start w-auto px-4 pt-10 md:px-16 md:justify-center md:items-center">
+        <div className="absolute inset-0 flex flex-col items-start justify-start w-auto px-4 pt-10 md:px-16 md:justify-center md:items-centermd:justify-center md:items-center">
           <h1 className="text-2xl font-bold tracking-wide text-left text-white uppercase font-josefin md:text-4xl">
             Introducing the all-new <br /> CLS 2018
           </h1>

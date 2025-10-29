@@ -1,11 +1,14 @@
 import Card from './components/Card';
 import Button from './components/Button';
+import FloatNavbar from './components/navbar';
+
 
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center w-full">
+
       <div className="relative w-full mb-20">
-        <img src="/ads-mercedes.jpg" alt="ads" className="object-cover w-full h-[560px]" />
+        <img src="/ads-mercedes.webp" alt="ads" className="object-cover w-full h-[560px]" />
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center pt-10">
           <h1 className="font-serif text-4xl font-bold text-center text-white uppercase md:text-6xl">
@@ -16,16 +19,16 @@ export default function HomePage() {
       </div>
 
       <div className="grid justify-center w-full grid-cols-1 gap-5 px-4 sm:grid-cols-2 md:grid-cols-3 max-w-[1200px] mb-20">
-        <Card image="cls.jpg" title="CLS63" description="The Mercedes-Benz CLS 63 is a high-performance luxury sedan combining sleek design, powerful V8 engine performance, and advanced technology for an exhilarating driving experience." />
-        <Card image="s-class.jpeg" title="S-CLASS" description="The Mercedes-Benz S-Class is the flagship luxury sedan, offering unmatched comfort, cutting-edge technology, and a refined, elegant design." />
-        <Card image="e-class.jfif" title="E-CLASS" description="The Mercedes-Benz E-Class is a midsize luxury sedan that combines elegance, advanced technology, and smooth performance for everyday comfort and style." />
-        <Card image="g-class.jfif" title="G-CLASS" description="The Mercedes-Benz G-Class is an iconic luxury SUV that combines rugged off-road capability with a premium interior and timeless design." />
-        <Card image="c300.jpg" title="C300" description="The Mercedes-Benz C300 2015 is a compact luxury sedan offering refined comfort, a smooth ride, and advanced technology features for everyday driving." />
-        <Card image="gla.jfif" title="GLA SUV" description="Mercedes-Benz GLA SUV – A compact luxury SUV that combines sleek design, advanced technology, and agile performance." />
+        <Card image="cls.webp" title="CLS63" description="The Mercedes-Benz CLS 63 is a high-performance luxury sedan combining sleek design, powerful V8 engine performance, and advanced technology for an exhilarating driving experience." />
+        <Card image="s-class.webp" title="S-CLASS" description="The Mercedes-Benz S-Class is the flagship luxury sedan, offering unmatched comfort, cutting-edge technology, and a refined, elegant design." />
+        <Card image="e-class.webp" title="E-CLASS" description="The Mercedes-Benz E-Class is a midsize luxury sedan that combines elegance, advanced technology, and smooth performance for everyday comfort and style." />
+        <Card image="g-class.webp" title="G-CLASS" description="The Mercedes-Benz G-Class is an iconic luxury SUV that combines rugged off-road capability with a premium interior and timeless design." />
+        <Card image="c300.webp" title="C300" description="The Mercedes-Benz C300 2015 is a compact luxury sedan offering refined comfort, a smooth ride, and advanced technology features for everyday driving." />
+        <Card image="gla.webp" title="GLA SUV" description="Mercedes-Benz GLA SUV – A compact luxury SUV that combines sleek design, advanced technology, and agile performance." />
       </div>
 
       <div className="relative w-full my-10 mb-20">
-        <video src="cls-ads.mp4" autoPlay muted loop playsInline className="object-cover w-full h-[560px]" />
+        <video src="cls-ads.mp4" autoPlay muted loop playsInline preload="auto" className="object-cover w-full h-[560px]" />
         <div className="absolute inset-0 bg-white opacity-5"></div>
         <div className="absolute inset-0 flex flex-col justify-end px-4 pb-6 md:px-16 md:pb-12 md:justify-end md:items-center">
           <h2 className="text-base leading-snug text-white capitalize font-josefin md:text-lg lg:text-xl md:leading-normal">
@@ -44,7 +47,7 @@ export default function HomePage() {
       </div>
 
       <div className="relative flex flex-col w-full mb-20 md:flex-row max-w-[1200px]">
-        <img src="/mer-icon.jpg" alt="ads" className="object-cover mb-5 w-full md:w-1/2 h-[360px] md:object-fill" />
+        <img src="/mer-icon.webp" alt="ads" className="object-contain mb-5 w-full md:w-1/2 h-[360px] md:object-fill" />
         <div className="flex flex-col items-center justify-center w-full md:w-1/2">
           <h2 className="text-4xl tracking-wide text-center text-black uppercase font-playwrite md:text-5xl">
             VISION ICONIC

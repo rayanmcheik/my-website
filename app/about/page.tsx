@@ -46,11 +46,11 @@ export default function AboutPage() {
           className="w-full h-[400px] sm:h-[550px] md:h-[650px] lg:h-[768px] "
         >
           {[
-            { image: '1.jpg', title: 'G-CLASS', colortext: 'text-white' },
-            { image: '2.jpg', title: 'Maybach V12', colortext: 'text-white' },
-            { image: '3.jpg', title: 'No need to explain.', colortext: 'text-white' },
-            { image: '4.jpg', title: 'GT3', colortext: 'text-white' },
-            { image: '5.jpg', title: 'Time to drive a Mercedes!', colortext: 'text-black' },
+            { image: '1.webp', title: 'G-CLASS', colortext: 'text-white' },
+            { image: '2.webp', title: 'Maybach V12', colortext: 'text-white' },
+            { image: '3.webp', title: 'No need to explain.', colortext: 'text-white' },
+            { image: '4.webp', title: 'GT3', colortext: 'text-white' },
+            { image: '5.webp', title: 'Time to drive a Mercedes!', colortext: 'text-black' },
           ].map((slide, index) => (
             <SwiperSlide
               key={index}

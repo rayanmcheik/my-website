@@ -64,7 +64,7 @@ export function DefaultAccordion() {
             </span>
           </AccordionHeader>
 
-          <AccordionBody className="pt-5 pb-3 leading-relaxed text-center text-black sm:text-left">
+          <AccordionBody className="pt-5 pb-3 leading-relaxed text-left text-black sm:text-left">
             {item.content}
           </AccordionBody>
         </Accordion>

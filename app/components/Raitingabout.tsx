@@ -14,10 +14,7 @@ export function Raitingabout() {
             <Typography variant="h6" className="mt-4">
                 Mercedes-Benz
             </Typography>
-            <Typography color="gray" className="mb-4 font-normal">
-                Mercedes-Benz 
-                
-            </Typography>
+
          <Rating value={5} readonly></Rating>
  
 

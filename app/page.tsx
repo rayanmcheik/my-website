@@ -1,6 +1,5 @@
 import Card from './components/Card';
 import Button from './components/Button';
-import FloatNavbar from './components/navbar';
 
 
 export default function HomePage() {

@@ -12,23 +12,10 @@ const FloatNavbar = () => {
     }
   }, [showSearch]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setTopPos(4);
-      } else {
-        setTopPos(100);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div
-      className={`fixed left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-[80%] bg-[#80808099] backdrop-blur-md rounded-full shadow-lg transition-all duration-300`}
-      style={{ top: `${topPos}px` }}
+      className={`absolute top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-[80%] bg-[#80808099] backdrop-blur-md rounded-full shadow-lg transition-all duration-300`}
+      
     >
       <div className="flex items-center justify-between w-full px-4 py-2">
         <div className="flex items-center gap-2">

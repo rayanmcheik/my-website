@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Button from '../components/Button';
+import FloatNavbar from '../components/navbar';
+
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -41,10 +43,11 @@ export default function ContactPage() {
 
     return (
         <main className="relative flex items-center justify-center min-h-screen px-4 pt-20 pb-20">
+                   <FloatNavbar />
             <div className="absolute inset-0 bg-[url('/backcontact.webp')] bg-cover bg-center z-0" />
             <div className="absolute inset-0 bg-black/10 z-0" />
 
-            <div className="relative z-10 w-full max-w-3xl p-8 bg-gray-500/90 border shadow-xl border-amber-50 rounded-2xl md:p-12">
+            <div className="relative z-10 w-full max-w-3xl p-8 bg-gray-500/90 backdrop-blur-md border shadow-xl border-amber-50 rounded-2xl md:p-12">
                 <h1 className="mb-6 text-3xl font-bold text-center text-white md:text-4xl">
                     Contact Us
                 </h1>
